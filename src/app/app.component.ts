@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public todos: any[] = [];
+  public title: String = 'Minha Lista de Tarefas'
 
   constructor(){
     this.todos.push('Passear com o cachorro.')
