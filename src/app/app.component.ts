@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo';
+  public todos: any[] = [];
+
+  constructor(){
+    this.todos.push('Passear com o cachorro.')
+    this.todos.push('Comprar alimento.')
+    this.todos.push('Não ser calvo.')
+  }
 }
