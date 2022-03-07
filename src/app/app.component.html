@@ -1,2 +1,7 @@
-<h1>ToDo App </h1>
-<h3>Balta.io</h3>
+<h1>{{ title }}</h1>
+
+<ul>
+    <li *ngFor="let todo of todos">
+        {{todo}}
+    </li>
+</ul>
