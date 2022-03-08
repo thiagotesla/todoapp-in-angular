@@ -101,3 +101,7 @@ input {
     border-radius: 10px;
     text-align: center;
 }
+
+.text-center {
+    text-align: center;
+}
