@@ -1,5 +1,5 @@
 <h1>{{ title }}</h1>
-
+<p *ngIf="todos.length==0"><small>Você ainda não tem tarefas adicionadas.</small></p>
 <form [formGroup]="form">
     <fieldset>
         <label>Adicionar nova tarefa: </label>
@@ -12,6 +12,7 @@
 </form>
 
 <ul>
+    
     <li *ngFor="let todo of todos">
         {{ todo.id }}. {{ todo.title}}
         <button *ngIf="!todo.done" (click)="markAsDone(todo)">Concluir</button>
