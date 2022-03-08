@@ -107,5 +107,6 @@ input {
     text-align: center;
 }
 
-
-
+div{
+    border-radius: 50px;
+}
