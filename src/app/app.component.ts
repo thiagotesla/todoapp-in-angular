@@ -18,7 +18,7 @@ export class AppComponent {
     this.form = this.fb.group({
       title: ['', Validators.compose([
         Validators.minLength(3),
-        Validators.maxLength(25),
+        Validators.maxLength(100),
         Validators.required,
       ]
       )]
