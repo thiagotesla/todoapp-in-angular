@@ -25,6 +25,7 @@ ul{
     -webkit-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
     -moz-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
     box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+    border-radius: 50px;
 }
 li{
     padding:5px;
@@ -87,7 +88,7 @@ input {
     padding: 10px;
     list-style: none;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 50px;
     -webkit-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
     -moz-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
     box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
