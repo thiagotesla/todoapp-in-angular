@@ -13,13 +13,13 @@ export class AppComponent {
   public form: FormGroup | any
 
 
-  constructor(private fb: FormBuilder){
+  constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       title: ['', Validators.compose([
-          Validators.minLength(3),
-          Validators.maxLength(25),
-          Validators.required,
-        ]
+        Validators.minLength(3),
+        Validators.maxLength(25),
+        Validators.required,
+      ]
       )]
     })
     this.todos.push(new Todo(1, 'Passear com o cachorro.', false))
@@ -27,18 +27,18 @@ export class AppComponent {
     this.todos.push(new Todo(3, 'Não ser calvo.', true))
   }
 
-  remove(todo: Todo){
+  remove(todo: Todo) {
     const index = this.todos.indexOf(todo)
-    if(index !== -1){
+    if (index !== -1) {
       this.todos.splice(index, 1)
     }
   }
 
-  markAsDone(todo: Todo){
+  markAsDone(todo: Todo) {
     todo.done = true
   }
 
-  markAsUndone(todo: Todo){
+  markAsUndone(todo: Todo) {
     todo.done = false
   }
 }
