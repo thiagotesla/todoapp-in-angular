@@ -2,6 +2,7 @@
 
 <ul>
     <li *ngFor="let todo of todos">
-        {{ todo.id }} {{ todo.title}}  <input type="button" value="Concluir"> | <input type="button" value="Arquivar">
+        {{ todo.id }} {{ todo.title}} <button *ngIf="!todo.done">Concluir</button> <button *ngIf="todo.done">Arquivar</button><br><br>
+        
     </li>
 </ul>
