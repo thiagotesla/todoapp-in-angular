@@ -8,7 +8,7 @@
         Este campo deve conter entre 3 e 60caracteres<br>
       </small></p>
       <p class="text-center">
-        <button [disabled]="form.invalid" (click)="add()" class="button"><i class="far fa-save"></i> Salvar</button>
+        <button [disabled]="form.invalid" (click)="add()" class="button"><i class="far fa-save"></i></button>
       </p>
     </form>
     <br><br>
@@ -26,9 +26,7 @@
 
 <button class="add-button animated fadeInUp button" (click)="changeMode('add')" *ngIf="mode=='list'">
     <i class="fas fa-plus-circle"></i>
-    NOVA TAREFA
   </button>
   <button class="add-button animated fadeInUp button" (click)="changeMode('list')" *ngIf="mode=='add'">
     <i class="fas fa-times"></i>
-    CANCELAR
   </button>
