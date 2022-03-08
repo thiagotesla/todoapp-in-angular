@@ -22,9 +22,12 @@ export class AppComponent {
       ]
       )]
     })
-    this.todos.push(new Todo(1, 'Passear com o cachorro.', false))
-    this.todos.push(new Todo(2, 'Comprar alimento.', false))
-    this.todos.push(new Todo(3, 'Não ser calvo.', true))
+  }
+
+  add(){
+    const title = this.form.controls['title'].value
+    const id = this.todos.length +1
+    this.todos.push(new Todo(id, title, false))
   }
 
   remove(todo: Todo) {
