@@ -1,5 +1,16 @@
 <h1>{{ title }}</h1>
 
+<form [formGroup]="form">
+    <fieldset>
+        <label>Adicionar nova tarefa: </label>
+        <input type="text" name="" id=""
+            placeholder="Digite aqui uma nova tarefa"
+            maxlength="25"
+            formControlName="title">
+        <button>Adicionar</button>
+    </fieldset>
+</form>
+
 <ul>
     <li *ngFor="let todo of todos">
         {{ todo.id }}. {{ todo.title}}
