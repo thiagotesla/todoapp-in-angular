@@ -34,6 +34,18 @@ li{
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
+li>button{
+    border: none;
+    background: #3023ae;
+    background: -moz-linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+    background: -webkit-linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+    background: linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+    font-size: 1em;
+    float: right;
+    opacity: 0.7;
+    transition: opacity 1s;
+}
+
 button{
     cursor: pointer;
 }
