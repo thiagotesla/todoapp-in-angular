@@ -1,5 +1,4 @@
 <h1 class="title animated jackInTheBox">{{ title }}</h1>
-<p *ngIf="todos.length==0"><small>Você ainda não tem tarefas adicionadas.</small></p>
 <div id="modal" *ngIf="mode=='add'" class="animated flipInX">
     <h1 class="text-center">Nova Tarefa</h1>
     <form [formGroup]="form">
@@ -14,15 +13,15 @@
     <br><br>
   </div>
 
-<ul class="animated flipInX" *ngIf="mode=='list'">
+  <ul class="animated flipInX" *ngIf="mode=='list'">
+    <p class="text-center" *ngIf="todos.length==0">Nenhuma tarefa adicionada</p>
     <li *ngFor="let todo of todos">
-        {{ todo.id }}. {{ todo.title}}
-        <button *ngIf="!todo.done" (click)="markAsDone(todo)">Concluir</button>
-        <button *ngIf="todo.done" (click)="markAsUndone(todo)">Reiniciar</button>
-        <button (click)="remove(todo)">Remover</button>
-
+      {{ todo.title }}
+      <button (click)="remove(todo)" class="remove"><i class="far fa-trash-alt"></i></button>
+      <button *ngIf="!todo.done" (click)="markAsDone(todo)" class="done"><i class="far fa-check-circle"></i></button>
+      <button *ngIf="todo.done" (click)="markAsUndone(todo)" class="undone"><i class="fas fa-check-circle"></i></button>
     </li>
-</ul>
+  </ul>
 
 <button class="add-button animated fadeInUp button" (click)="changeMode('add')" *ngIf="mode=='list'">
     <i class="fas fa-plus-circle"></i>
