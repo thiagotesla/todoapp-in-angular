@@ -1,5 +1,6 @@
 body{
     height: 100vh;
+    display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -75,4 +76,6 @@ input {
     line-height: 50px;
     text-indent: 10px;
     font-size: 1.2em;
+    background-color: #fff;
+    border-radius: 40px;
 }
