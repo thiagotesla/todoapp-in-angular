@@ -1,17 +1,18 @@
 <h1 class="title animated jackInTheBox">{{ title }}</h1>
 <p *ngIf="todos.length==0"><small>Você ainda não tem tarefas adicionadas.</small></p>
 <div id="modal" *ngIf="mode=='add'" class="animated flipInX">
+    <h1 class="text-center">Nova Tarefa</h1>
     <form [formGroup]="form">
-        <fieldset>
-            <label>Adicionar nova tarefa: </label>
-            <input type="text" name="" id="" placeholder="Digite aqui uma nova tarefa" maxlength="25"
-                formControlName="title">
-            <button class="button" [disabled]="form.invalid" (click)="add()">+</button>
-            <small *ngIf="form.controls.title.invalid && !form.controls.title.pristine">
-                * O campo de ter entre 3 e 25 caracteres.</small>
-        </fieldset>
+      <input type="text" placeholder="Título da Tarefa" maxlength="60" formControlName="title"><br>
+      <p class="text-center"><small class="danger" *ngIf="form.controls.title.invalid && !form.controls.title.pristine">
+        Este campo deve conter entre 3 e 60caracteres<br>
+      </small></p>
+      <p class="text-center">
+        <button [disabled]="form.invalid" (click)="add()" class="button"><i class="far fa-save"></i> Salvar</button>
+      </p>
     </form>
-</div>
+    <br><br>
+  </div>
 
 <ul class="animated flipInX" *ngIf="mode=='list'">
     <li *ngFor="let todo of todos">
