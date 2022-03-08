@@ -8,6 +8,7 @@ import { Todo } from 'src/models/todo.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public mode: String = 'list'
   public todos: Todo[] = []
   public title: String = 'Minha Lista de Tarefas'
   public form: FormGroup | any
@@ -67,5 +68,8 @@ export class AppComponent {
     } else {
       this.todos = [];
     }
+  }
+  changeMode(mode: String) {
+    this.mode = mode;
   }
 }
