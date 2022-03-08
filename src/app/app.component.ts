@@ -28,6 +28,11 @@ export class AppComponent {
     const title = this.form.controls['title'].value
     const id = this.todos.length +1
     this.todos.push(new Todo(id, title, false))
+    this.clearForm()
+  }
+
+  clearForm(){
+    this.form.reset()
   }
 
   remove(todo: Todo) {
